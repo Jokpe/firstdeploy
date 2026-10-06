@@ -44,7 +44,7 @@
         card.addEventListener('click', (e) => {
           e.preventDefault(); // prevent any link behaviour (they are divs, but safe)
           const project = card.dataset.project || 'this project';
-          showToast(🔍 Opening ${project} case study…);
+          showToast(`🔍 Opening ${project} case study…`);
         });
       });
 
@@ -54,14 +54,14 @@
         link.addEventListener('click', (e) => {
           e.preventDefault();
           const network = link.dataset.social || 'social';
-          showToast(🔗 Redirecting to ${network} profile…);
+          showToast(`🔗 Redirecting to ${network} profile…`);
         });
       });
 
       // ----- CTA BUTTON -----
       const ctaBtn = document.getElementById('ctaBtn');
       ctaBtn.addEventListener('click', () => {
-        showToast(📬 Thanks! Let's build something great — check your inbox.);
+        showToast(`📬 Thanks! Let's build something great — check your inbox.`);
         // optional: copy email to clipboard
         if (navigator.clipboard) {
           navigator.clipboard.writeText('alex.rivera@example.dev').catch(() => {});
