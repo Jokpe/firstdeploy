@@ -1,5 +1,4 @@
-
-    (function() {
+(function() {
       // ----- DARK MODE TOGGLE (with localStorage) -----
       const themeToggle = document.getElementById('themeToggle');
       const body = document.body;
