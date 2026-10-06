@@ -3,117 +3,485 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fekpe John · creative developer</title>
-  <!-- Google Fonts & Font Awesome for clean icons -->
+  <meta name="description" content="Fekpe John - Award-winning full-stack & creative developer. Build scalable applications, stunning UIs, and digital experiences that drive results.">
+  <meta name="keywords" content="full-stack developer, web developer, React, Node.js, creative coding, digital solutions">
+  <meta name="author" content="Fekpe John">
+  <meta property="og:title" content="Fekpe John | Full-Stack Developer & Creative Technologist">
+  <meta property="og:description" content="Building digital experiences that blend precision & play. Let's create something great together.">
+  <meta property="og:type" content="website">
+  
+  <title>Fekpe John | Full-Stack Developer & Creative Technologist</title>
+  
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800;14..32,900&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  
+  <!-- Styles -->
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-  <main class="portfolio-card">
-    <!-- HEADER -->
-    <div class="profile-header">
-      <div class="avatar-group">
-        <div class="avatar">FJ</div>
-        <div class="title">
-          <h1>Fekpe John</h1>
-          <div class="badge">
-            <i class="fas fa-code"></i> full-stack & creative dev
-          </div>
-        </div>
+  <!-- NAVIGATION BAR -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">
+        <span class="brand-icon">⚡</span>
+        <span class="brand-text">Fekpe John</span>
       </div>
-      <div class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+      <div class="nav-links">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#services" class="nav-link">Services</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#testimonials" class="nav-link">Testimonials</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <div class="nav-toggle" id="navToggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="theme-toggle-nav" id="themeToggleNav" aria-label="Toggle dark mode">
         <i class="fas fa-moon"></i>
       </div>
     </div>
+  </nav>
 
-    <!-- BIO -->
-    <div class="bio">
-      Fekpe John is building digital experiences that blend precision & play. 
-      I turn complex problems into elegant, human-friendly interfaces.
-    </div>
-
-    <!-- STATS -->
-    <div class="stats-grid">
-      <div class="stat-item">
-        <div class="stat-value">7+</div>
-        <div class="stat-label">years crafting</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value">38</div>
-        <div class="stat-label">projects shipped</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-value">12k</div>
-        <div class="stat-label">GitHub stars</div>
-      </div>
-    </div>
-
-    <!-- SKILLS -->
-    <div class="section-title">⚡ core stack</div>
-    <div class="skills-container">
-      <span class="skill-tag"><i class="fab fa-react"></i> React</span>
-      <span class="skill-tag"><i class="fab fa-vuejs"></i> Vue</span>
-      <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
-      <span class="skill-tag"><i class="fas fa-database"></i> MongoDB</span>
-      <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
-      <span class="skill-tag"><i class="fas fa-cloud"></i> AWS</span>
-      <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Flutter</span>
-    </div>
-
-    <!-- PROJECTS (interactive) -->
-    <div class="section-title">📌 featured work</div>
-    <div class="projects-grid">
-      <div class="project-card" data-project="FlowBoard">
-        <div class="project-icon"><i class="fas fa-columns"></i></div>
-        <h3>FlowBoard</h3>
-        <p>Kanban for remote teams with real-time sync & AI suggestions.</p>
-        <div class="project-meta">
-          <span><i class="fas fa-star"></i> 2.1k</span>
-          <span><i class="fas fa-code-branch"></i> 342</span>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-avatar">FJ</div>
+      <h1 class="hero-title">
+        I Build <span class="gradient-text">Digital Experiences</span> That Drive Results
+      </h1>
+      <p class="hero-subtitle">
+        Full-stack developer crafting beautiful, scalable applications. From concept to production, I turn your vision into reality.
+      </p>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-number">7+</div>
+          <div class="stat-text">Years Experience</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">38+</div>
+          <div class="stat-text">Projects Delivered</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number">100%</div>
+          <div class="stat-text">Client Satisfied</div>
         </div>
       </div>
-      <div class="project-card" data-project="EcoChain">
-        <div class="project-icon"><i class="fas fa-leaf"></i></div>
-        <h3>EcoChain</h3>
-        <p>Blockchain-based supply chain tracker for sustainable goods.</p>
-        <div class="project-meta">
-          <span><i class="fas fa-star"></i> 1.4k</span>
-          <span><i class="fas fa-code-branch"></i> 198</span>
+      <div class="hero-cta">
+        <a href="#contact" class="btn btn-primary">
+          <i class="fas fa-rocket"></i> Start Your Project
+        </a>
+        <a href="#portfolio" class="btn btn-secondary">
+          <i class="fas fa-arrow-right"></i> View My Work
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="floating-card card-1">
+        <i class="fas fa-code"></i>
+        <span>Clean Code</span>
+      </div>
+      <div class="floating-card card-2">
+        <i class="fas fa-rocket"></i>
+        <span>Performance</span>
+      </div>
+      <div class="floating-card card-3">
+        <i class="fas fa-paint-brush"></i>
+        <span>Design</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES SECTION -->
+  <section id="services" class="services">
+    <div class="section-header">
+      <h2>What I Offer</h2>
+      <p>End-to-end solutions tailored to your needs</p>
+    </div>
+    
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-desktop"></i>
+        </div>
+        <h3>Web Development</h3>
+        <p>Modern, responsive websites and applications built with cutting-edge technologies. React, Vue, Node.js, and more.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-mobile-alt"></i>
+        </div>
+        <h3>Mobile Apps</h3>
+        <p>Native and cross-platform mobile solutions using Flutter and React Native. Download at launch.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-palette"></i>
+        </div>
+        <h3>UI/UX Design</h3>
+        <p>Beautiful, intuitive interfaces that users love. From wireframes to high-fidelity prototypes and implementation.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-database"></i>
+        </div>
+        <h3>Backend Solutions</h3>
+        <p>Scalable server architecture, APIs, databases. Built for performance and security.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-cloud"></i>
+        </div>
+        <h3>Cloud Deployment</h3>
+        <p>AWS, Firebase, Heroku, Vercel deployment. CI/CD pipelines, monitoring, and maintenance.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon">
+          <i class="fas fa-cogs"></i>
+        </div>
+        <h3>Consulting</h3>
+        <p>Technical strategy, code review, team training. Help your team ship faster and better.</p>
+        <a href="#contact" class="service-link">Learn More <i class="fas fa-arrow-right"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- TECH STACK SECTION -->
+  <section class="tech-stack">
+    <div class="section-header">
+      <h2>My Tech Arsenal</h2>
+      <p>Tools and technologies I master</p>
+    </div>
+    
+    <div class="stack-categories">
+      <div class="stack-category">
+        <h4>Frontend</h4>
+        <div class="tech-list">
+          <span class="tech-badge">React</span>
+          <span class="tech-badge">Vue.js</span>
+          <span class="tech-badge">TypeScript</span>
+          <span class="tech-badge">Tailwind CSS</span>
+          <span class="tech-badge">Next.js</span>
         </div>
       </div>
-      <div class="project-card" data-project="DevMetrics">
-        <div class="project-icon"><i class="fas fa-chart-line"></i></div>
-        <h3>DevMetrics</h3>
-        <p>Open-source dashboard that visualizes your coding habits.</p>
-        <div class="project-meta">
-          <span><i class="fas fa-star"></i> 3.2k</span>
-          <span><i class="fas fa-code-branch"></i> 526</span>
+
+      <div class="stack-category">
+        <h4>Backend</h4>
+        <div class="tech-list">
+          <span class="tech-badge">Node.js</span>
+          <span class="tech-badge">Express</span>
+          <span class="tech-badge">Python</span>
+          <span class="tech-badge">MongoDB</span>
+          <span class="tech-badge">PostgreSQL</span>
+        </div>
+      </div>
+
+      <div class="stack-category">
+        <h4>Tools & DevOps</h4>
+        <div class="tech-list">
+          <span class="tech-badge">Docker</span>
+          <span class="tech-badge">AWS</span>
+          <span class="tech-badge">Git</span>
+          <span class="tech-badge">CI/CD</span>
+          <span class="tech-badge">Firebase</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PORTFOLIO / FEATURED WORK -->
+  <section id="portfolio" class="portfolio">
+    <div class="section-header">
+      <h2>Featured Projects</h2>
+      <p>Handpicked case studies showcasing impact and innovation</p>
+    </div>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <i class="fas fa-columns"></i>
+        </div>
+        <div class="portfolio-content">
+          <h3>FlowBoard</h3>
+          <p class="portfolio-desc">Kanban management platform for remote teams with real-time sync and AI-powered task suggestions.</p>
+          <div class="portfolio-tech">
+            <span>React</span>
+            <span>Node.js</span>
+            <span>WebSocket</span>
+            <span>AI</span>
+          </div>
+          <div class="portfolio-meta">
+            <span><i class="fas fa-star"></i> 2.1k stars</span>
+            <span><i class="fas fa-code-branch"></i> 342 forks</span>
+          </div>
+          <div class="portfolio-links">
+            <a href="#" class="link-btn">View Case Study</a>
+            <a href="#" class="link-btn secondary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <i class="fas fa-leaf"></i>
+        </div>
+        <div class="portfolio-content">
+          <h3>EcoChain</h3>
+          <p class="portfolio-desc">Blockchain-powered supply chain tracking for sustainable goods. Transparent and immutable records.</p>
+          <div class="portfolio-tech">
+            <span>Blockchain</span>
+            <span>Web3.js</span>
+            <span>React</span>
+            <span>Smart Contracts</span>
+          </div>
+          <div class="portfolio-meta">
+            <span><i class="fas fa-star"></i> 1.4k stars</span>
+            <span><i class="fas fa-code-branch"></i> 198 forks</span>
+          </div>
+          <div class="portfolio-links">
+            <a href="#" class="link-btn">View Case Study</a>
+            <a href="#" class="link-btn secondary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item">
+        <div class="portfolio-image">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <div class="portfolio-content">
+          <h3>DevMetrics</h3>
+          <p class="portfolio-desc">Open-source analytics dashboard visualizing coding habits, productivity metrics, and project insights.</p>
+          <div class="portfolio-tech">
+            <span>Vue.js</span>
+            <span>D3.js</span>
+            <span>Python</span>
+            <span>PostgreSQL</span>
+          </div>
+          <div class="portfolio-meta">
+            <span><i class="fas fa-star"></i> 3.2k stars</span>
+            <span><i class="fas fa-code-branch"></i> 526 forks</span>
+          </div>
+          <div class="portfolio-links">
+            <a href="#" class="link-btn">View Case Study</a>
+            <a href="#" class="link-btn secondary">Live Demo</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIALS SECTION -->
+  <section id="testimonials" class="testimonials">
+    <div class="section-header">
+      <h2>What Clients Say</h2>
+      <p>Real feedback from real projects</p>
+    </div>
+
+    <div class="testimonials-grid">
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Fekpe delivered our project on time and exceeded expectations. The code quality and attention to detail are exceptional. Highly recommended!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">SM</div>
+          <div>
+            <div class="author-name">Sarah Mitchell</div>
+            <div class="author-role">CEO, TechStart Inc</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"Working with Fekpe was a game-changer. Not only is he technically brilliant, but he also understands business needs. A rare combination!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">JK</div>
+          <div>
+            <div class="author-name">James Kumar</div>
+            <div class="author-role">Product Manager, Digital Ventures</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial-card">
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+        </div>
+        <p class="testimonial-text">"The most professional developer I've worked with. Fekpe's communication and problem-solving skills are outstanding. Worth every penny!"</p>
+        <div class="testimonial-author">
+          <div class="author-avatar">LC</div>
+          <div>
+            <div class="author-name">Lisa Chen</div>
+            <div class="author-role">Founder, CloudSoft Solutions</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT SECTION -->
+  <section id="contact" class="contact">
+    <div class="section-header">
+      <h2>Let's Build Something Great</h2>
+      <p>Have a project in mind? Let's talk about it.</p>
+    </div>
+
+    <div class="contact-container">
+      <div class="contact-info">
+        <h3>Get In Touch</h3>
+        <p>Ready to start your next project? Reach out through any of these channels.</p>
+        
+        <div class="contact-methods">
+          <div class="contact-method">
+            <i class="fas fa-envelope"></i>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:fekpejohn@example.dev">fekpejohn@example.dev</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <i class="fas fa-phone"></i>
+            <div>
+              <h4>WhatsApp</h4>
+              <a href="https://wa.me/233241224773" target="_blank" rel="noopener noreferrer">+233 241 224 773</a>
+            </div>
+          </div>
+
+          <div class="contact-method">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Location</h4>
+              <p>Ghana (Open to Remote)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-links-contact">
+          <a href="https://wa.me/233241224773" class="social-link-large" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/jokpeit/" class="social-link-large" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-linkedin-in"></i>
+          </a>
+          <a href="https://www.twitter.com/jokpeit" class="social-link-large" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-twitter"></i>
+          </a>
+          <a href="https://github.com/Jokpe" class="social-link-large" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+            <i class="fab fa-github"></i>
+          </a>
+        </div>
+      </div>
+
+      <form class="contact-form" id="contactForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" name="name" required placeholder="John Doe">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required placeholder="you@example.com">
+        </div>
+
+        <div class="form-group">
+          <label for="phone">Phone (Optional)</label>
+          <input type="tel" id="phone" name="phone" placeholder="+1 (555) 123-4567">
+        </div>
+
+        <div class="form-group">
+          <label for="subject">Project Type</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select a project type...</option>
+            <option value="web">Web Development</option>
+            <option value="mobile">Mobile App</option>
+            <option value="design">UI/UX Design</option>
+            <option value="consulting">Consulting</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Project Details</label>
+          <textarea id="message" name="message" rows="5" required placeholder="Tell me about your project..."></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-primary btn-large">
+          <i class="fas fa-paper-plane"></i> Send Message
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Fekpe John</h4>
+        <p>Full-stack developer & creative technologist building digital experiences that matter.</p>
+      </div>
+
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-section">
+        <h4>Follow Me</h4>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/jokpeit/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://www.twitter.com/jokpeit" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
+          <a href="https://github.com/Jokpe" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
         </div>
       </div>
     </div>
 
-    <!-- FOOTER / SOCIAL + CTA -->
-    <div class="footer">
-      <div class="social-links">
-        <a href="https://wa.me/233241224773" class="social-link" aria-label="whatsapp" data-social="whatsapp" target="_blank" rel="noopener noreferrer"><i class="fab fa-whatsapp"></i></a>
-        <a href="https://www.linkedin.com/in/jokpeit/" class="social-link" aria-label="linkedIn" data-social="linkedIn" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://www.twitter.com/jokpeit" class="social-link" aria-label="twitter" data-social="twitter" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-        <a href="https://www.facebook.com/Jokpe2/" class="social-link" aria-label="facebook" data-social="facebook" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook"></i></a>
-        <a href="https://www.tiktok.com/@jokpeschool?_r=1&_t=ZS-9AKxXSi4GOY/" class="social-link" aria-label="tiktok" data-social="tiktok" target="_blank" rel="noopener noreferrer"><i class="fab fa-tiktok"></i></a>
-      </div>
-      <button class="cta-button" id="ctaBtn">
-        <i class="fas fa-paper-plane"></i> Let's connect
-      </button>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Fekpe John. All rights reserved. | <a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
     </div>
-  </main>
+  </footer>
 
   <!-- toast notification -->
   <div class="toast-message" id="toast">✨ Thanks for exploring!</div>
 
-  
+  <!-- Scripts -->
   <script src="js/app.js"></script>
 </body>
 </html>
