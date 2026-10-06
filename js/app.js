@@ -52,9 +52,9 @@
       const socialLinks = document.querySelectorAll('.social-link');
       socialLinks.forEach(link => {
         link.addEventListener('click', (e) => {
-          e.preventDefault();
           const network = link.dataset.social || 'social';
           showToast(`🔗 Redirecting to ${network} profile…`);
+          // Allow the link to open after showing the toast
         });
       });
 
