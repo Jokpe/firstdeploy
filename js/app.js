@@ -52,9 +52,18 @@
       const socialLinks = document.querySelectorAll('.social-link');
       socialLinks.forEach(link => {
         link.addEventListener('click', (e) => {
+          e.preventDefault();
+
           const network = link.dataset.social || 'social';
+          const url = link.href;
+
           showToast(`🔗 Redirecting to ${network} profile…`);
-          // Allow the link to open after showing the toast
+
+          // Force the browser to open the external profile immediately in a new tab.
+          // This avoids the toast click handler blocking navigation.
+          if (url && url !== '#') {
+            window.open(url, '_blank', 'noopener,noreferrer');
+          }
         });
       });
 
