@@ -49,15 +49,15 @@
         });
       });
 
-      // ----- SOCIAL LINKS (preview) -----
-      const socialLinks = document.querySelectorAll('.social-link');
-      socialLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          const network = link.dataset.social || 'social';
-          showToast(`🔗 Redirecting to ${network} profile…`);
-        });
-      });
+      // ----- SOCIAL LINKS (fixed) -----
+const socialLinks = document.querySelectorAll('.social-link');
+socialLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    const network = link.dataset.social || 'social';
+    showToast(`🔗 Redirecting to ${network} profile…`);
+    // allow the link to actually open - don't prevent default
+  });
+});
 
       // ----- CTA BUTTON -----
       const ctaBtn = document.getElementById('ctaBtn');
